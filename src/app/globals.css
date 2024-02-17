@@ -2,32 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#303b37, #1a1f1d);
+  color: #e1eeeb;
+  min-height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+#header {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+
+#header img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+}
+
+#user-input {
+  max-width: 30rem;
+  border-radius: 4px;
+  padding-block: 32px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+
+#user-input label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+#user-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #76c0ae;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #c2e9e0;
+  font-size: 1rem;
+}
+
+#result {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
+#result thead {
+  font-size: 0.7rem;
+  color: #83e6c0;
+}
+
+#result tbody {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.85rem;
+  color: #c2e9e0;
+}
+
+.center {
+  text-align: center;
 }
